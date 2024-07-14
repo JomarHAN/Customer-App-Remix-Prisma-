@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "1ea2a7e560a0c381a662166a992a507b"
+name = "Customer App"
+handle = "customer-app-43"
+application_url = "https://source-hills-illinois-gba.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "ti-amor.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_customers,write_customers"
+
+[auth]
+redirect_urls = [
+  "https://source-hills-illinois-gba.trycloudflare.com/auth/callback",
+  "https://source-hills-illinois-gba.trycloudflare.com/auth/shopify/callback",
+  "https://source-hills-illinois-gba.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-07"
+
+[pos]
+embedded = false
